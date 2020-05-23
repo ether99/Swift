@@ -1,0 +1,43 @@
+ import UIKit
+ import Foundation
+
+ let a: Double = 3
+ let b: Double = 98
+ let c: Double = -43
+
+ let x1: Double
+ let x2: Double
+ let D: Double = b * b - 4 * a * c
+
+ if (D > 0) {
+     x1 = -b + sqrt(D) / (2 * a)
+     x2 = -b - sqrt(D) / (2 * a)
+ print("Уравнение имеет два корня: x1 = \(x1), x2 = \(x2)")
+ }   else if (D == 0) {
+     x1 = -b / (2 * a)
+     print ("Уравнение имеет один корень: x1 = \(x1)")
+ } else {
+     print("Нет корней")
+ }
+
+ // Даны катеты треугольника. Найти площадь, периметр и гипотенузу
+ let catet1 = 5
+ let catet2 = 9
+ var hyp = sqrt(Double(catet1 * catet1 + catet2 * catet2))
+ hyp = Double(round(hyp*100)/100)
+ let perimeter = Double(catet1) + Double(catet2) + hyp
+ let square = Double(catet1 + catet2) / 2
+ print("При заданных катетах \(catet1) * \(catet2) гипотенуза равна \(hyp), периметр равен \(perimeter), площадь равна \(square)")
+
+
+ //Пользователь вводит сумму вклада в банк и годовой процент. Найти сумму вклада через 5 лет.
+
+ var summa: Double = 1500
+ var procent: Double = 9
+ summa += (summa * procent / 100)
+ summa += (summa * procent / 100)
+ summa += (summa * procent / 100)
+ summa += (summa * procent / 100)
+ summa += (summa * procent / 100)
+ print("Через пять лет сумма вклада будет = \(summa)")
+
